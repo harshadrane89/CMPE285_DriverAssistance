@@ -1,0 +1,29 @@
+﻿@model List<DrivingAssistance_1.Models.Yelp.Business>   
+
+@{
+    ViewBag.Title = "Data";
+}
+
+@{
+
+    {
+        if(ViewData.Model!=null){
+        foreach (var business in ViewData.Model)
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>
+                        @business.name
+                    </h4>
+                    <p>@business.address1 </p>
+                    <p>@business.address2 </p>
+                    <p>@business.city</p>
+                    <p>@business.phone</p>
+                    <p>@business.avg_rating</p>
+                </div>
+
+            </div>
+        }
+    }
+}
+}

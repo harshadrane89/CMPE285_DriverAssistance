@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Reimers.Core</id>
+    <version>5.3.95.699</version>
+    <authors>Jacob Reimers</authors>
+    <owners>Jacob Reimers</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core interfaces for Reimers.dk Libraries</description>
+    <summary>Core interfaces for Reimers.dk Libraries</summary>
+    <tags>core interface</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Drawing" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Net" targetFramework="Silverlight4.0" />
+      <frameworkAssembly assemblyName="System.Runtime.Serialization" targetFramework="Silverlight4.0" />
+      <frameworkAssembly assemblyName="System.Windows" targetFramework="Silverlight4.0" />
+    </frameworkAssemblies>
+    <references>
+      <reference file="Reimers.Core.dll" />
+      <reference file="Reimers.Core.xml" />
+    </references>
+  </metadata>
+</package>

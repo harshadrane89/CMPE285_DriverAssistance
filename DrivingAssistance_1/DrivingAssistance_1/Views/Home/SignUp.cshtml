@@ -1,0 +1,87 @@
+﻿@model DrivingAssistance_1.Models.DTO.UserInfo
+
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<html>
+<head>
+    <title>Driving Assistance-SignUp</title>
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/style.css" rel="stylesheet" type="text/css" />
+   
+</head>
+<body>
+    <div class="header">
+
+        <br /> <br /> <br />
+        <ul class="nav nav-pills pull-right">
+            <li class="active">
+                <a href="@Url.Action("Login")" class="btn btn-default">Home</a>
+
+            </li>
+
+        </ul>
+
+        <br /> <br /> <br /> <br />
+
+
+
+        <center>
+            <h1>Driving Assistane SignUp </h1>
+        </center>
+    </div>
+    <br>
+    <br>
+    <center>
+        @using (var f = Html.Bootstrap().Begin(new Form("SignUp").Type(FormType.Horizontal).Class("well")))
+        {
+
+
+
+            <table cellpadding="10px" cellspacing="10px" class="">
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        
+                        <input type="text" value="@Model.fName" required="true" placeholder="First Name" name="fName" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <input type="text" value="@Model.lName" required="true" placeholder="Last Name" name="lName" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="email" value="@Model.email" required="true" placeholder="Email" name="email" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" value="@Model.password" required="true" placeholder="Password" name="passwd" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    
+                    @Model.error;
+
+                </tr>
+
+            </table>
+            <br> <br>
+
+            <br>
+            <button class="btn btn-lg btn-success" type="submit" value="Sign Up">SignUp</button>
+
+        }
+    </center>
+
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

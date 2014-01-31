@@ -1,0 +1,140 @@
+﻿@model DrivingAssistance_1.Models.DTO.Login
+@{
+    ViewBag.Title = "Login";
+}
+
+<html>
+<head>
+    <title>Driving Assistance</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/style.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Courosal.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Driving Assistance</a>
+            </div>
+            <div class="navbar-collapse collapse">
+        @using (var f = Html.Bootstrap().Begin(new Form("Login").Type(FormType.Horizontal).Class("navbar-form navbar-right")))
+            {
+                 <table cellspacing="10px" cellpadding="10px">
+                     <tr>
+                         <td>
+                             <input type="text" value="@Model.UserName" required="true" placeholder="Email" name="uName" class="form-control"/>
+                             
+                         </td>
+                         <td>
+                             <input type="password" value="@Model.Password" required="true" placeholder="Password" name="uPasswd" class="form-control" />
+                             
+                         </td>
+                         <td>                             
+                             &nbsp;&nbsp;&nbsp;
+                             &nbsp;&nbsp;&nbsp;
+                             <button type="submit" class="btn btn-success">Sign in</button>
+                         </td>
+
+                     </tr>
+
+                 </table>
+                    
+                        
+                 
+                  
+                    
+                    <div class="form-group">
+                        
+                    </div>
+            <div class="form-group">
+                    
+                </div>
+        }
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
+
+
+    <br/> 
+    <br />   
+    <br />    
+    <br />    
+    
+    <br /> 
+    
+    <center>
+        @if (Model.error != null)
+        {
+            <p>@Model.error</p>
+        }
+    </center>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="Images/1.jpg" alt="First slide" style="width='400px'">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1 style="color='#0000000'">Driving Assistance</h1>
+                        <p>The Ultimate Application For Drivers To Know Their Way</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src='Images/2.jpg' alt="Second slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Traffic Information</h1>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src='Images/3.jpg' alt="Third slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Navigation</h1>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src='Images/4.png' alt="Third slide" style="width='400px'">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Weather</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->   
+    <center>
+      
+@using (Html.BeginForm("SignUp", "Home", FormMethod.Get))
+{
+        <input type="submit" class="btn btn-success btn-lg" value="&nbsp; &nbsp; &nbsp; &nbsp;   SignUp  &nbsp;&nbsp; &nbsp; &nbsp;    " />
+}
+    </center>
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</body>
+
+</html>
